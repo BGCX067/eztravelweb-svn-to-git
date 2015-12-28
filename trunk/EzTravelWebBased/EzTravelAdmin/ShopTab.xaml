@@ -1,0 +1,100 @@
+﻿<navigation:Page x:Class="EzTravelAdmin.ShopTab" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="534" d:DesignHeight="475"
+           Title="EventsTab Page" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    <Grid x:Name="LayoutRoot" Background="LightBlue" Width="530" Height="500" ShowGridLines="False">
+        <sdk:TabControl Height="390" HorizontalAlignment="Left" Margin="16,55,0,0" Name="tabControlShop" VerticalAlignment="Top" Width="491">
+            <sdk:TabItem Header="Insert" Name="tabInsert" >
+                <Grid Height="363" Width="482">
+                    <Button Content="Insert" Height="23" HorizontalAlignment="Left" Margin="391,319,0,0" Name="btnInsert" VerticalAlignment="Top" Width="75" Click="btnInsert_Click" />
+                    <sdk:Label Height="28" HorizontalAlignment="Left" Margin="12,6,0,0" Name="lblSName" VerticalAlignment="Top" Width="69" Content="Name : "/>
+                    <TextBox Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="87,5,0,0" Name="tbxInsertName" VerticalAlignment="Top" Width="120" />
+                    <sdk:Label Height="28" HorizontalAlignment="Left" Margin="12,35,0,0" Name="lblSVenue" VerticalAlignment="Top" Width="69" Grid.Row="1" Content="Venue : "/>
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="87,35,0,0" Name="tbxSVenue" VerticalAlignment="Top" Width="120"  />
+                    <sdk:Label Height="28" HorizontalAlignment="Left" Margin="12,64,0,0" Name="lblSLong" VerticalAlignment="Top" Width="69" Content="Longtitude : "/>
+                    <sdk:Label Height="28" HorizontalAlignment="Left" Margin="12,98,0,0" Name="lblSLat" VerticalAlignment="Top" Width="69" Content="Latitude : "/>
+                    <sdk:Label Height="28" HorizontalAlignment="Left" Margin="12,120,0,0" Name="lblDesc" VerticalAlignment="Top" Width="93" Content="Description : "/>
+                    <sdk:Label Height="19" HorizontalAlignment="Right" Margin="0,0,184,326" Name="lblImage" VerticalAlignment="Bottom" Width="55" Content="Image : " />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="87,64,0,0" Name="tbxSlong" VerticalAlignment="Top" Width="120" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="88,94,0,0" Name="tbxSlat" VerticalAlignment="Top" Width="120" />
+                    <Image Height="150" HorizontalAlignment="Left" Margin="243,74,0,0" Name="insertimage" Stretch="Fill" VerticalAlignment="Top" Width="175"  />
+                    <TextBox Height="146" HorizontalAlignment="Left" Margin="12,145,0,0" Name="tbxDesc" VerticalAlignment="Top" Width="195" TextWrapping="Wrap"/>
+                    <Button Content="Upload Image" Height="23" HorizontalAlignment="Left" Margin="243,40,0,0" Name="btnUpload" VerticalAlignment="Top" Width="86" Click="btnInsertImage_Click" />
+                </Grid>
+            </sdk:TabItem>
+            <sdk:TabItem Header="Manage" Name="tabManage">
+                <Grid>
+                    <TextBlock Height="23" HorizontalAlignment="Left" Margin="11,13,0,0" Name="tbkName" Text="Shopping Name :" VerticalAlignment="Top" />
+                    <Button Content="Search" Height="23" HorizontalAlignment="Right" Margin="0,12,53,0" Name="btnSearch" VerticalAlignment="Top" Width="75" Click="btnSearch_Click" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="107,12,0,0" Name="tbxName" VerticalAlignment="Top" Width="221" />
+                    <sdk:DataGrid AutoGenerateColumns="False" Height="195" HorizontalAlignment="Left" Margin="12,56,0,0" Name="DGShop" VerticalAlignment="Top" Width="454" SelectionChanged="DGShop_SelectionChanged">
+                        <sdk:DataGrid.Columns>
+                            <sdk:DataGridTextColumn Binding="{Binding SID}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Width="Auto" Header="ID"  />
+                            <sdk:DataGridTextColumn Binding="{Binding SName}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Name" Width="Auto" />
+                            <sdk:DataGridTextColumn Binding="{Binding SVenue}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Venue" Width="Auto"  />
+                            <sdk:DataGridTextColumn Binding="{Binding SDesc}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Description"  Width="Auto" />
+                            <sdk:DataGridTextColumn Binding="{Binding SLong}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Longitude"  Width="Auto" />
+                            <sdk:DataGridTextColumn Binding="{Binding SLat}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Latitude"  Width="Auto" />
+                        </sdk:DataGrid.Columns>
+                    </sdk:DataGrid>
+                    <Button Content="Update" Height="23" HorizontalAlignment="Left" Margin="264,286,0,0" Name="btnBUpdate" VerticalAlignment="Top" Width="75" Click="btnBUpdate_Click" />
+                    <Button Content="Delete" Height="23" HorizontalAlignment="Left" Margin="351,286,0,0" Name="btnBDelete" VerticalAlignment="Top" Width="75" Click="btnBDelete_Click" />
+                </Grid>
+            </sdk:TabItem>
+            <sdk:TabItem Header="Update" Name="tabUpdate">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="304*" />
+                        <ColumnDefinition Width="96*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="35" />
+                        <RowDefinition Height="226*" />
+                        <RowDefinition Height="39*"/>
+                    </Grid.RowDefinitions>
+                    <Button Content="Update" Grid.Column="1" Grid.Row="2" Height="23" HorizontalAlignment="Left" Margin="11,4,0,0" Name="btnUpdate" VerticalAlignment="Top" Width="75" Click="btnUpdate_Click" />
+                    <sdk:Label Grid.Row="1" Height="28" HorizontalAlignment="Left" Margin="12,9,0,0" Name="lblShopName" VerticalAlignment="Top" Width="69" Content="Name : "/>
+                    <sdk:Label Height="28" HorizontalAlignment="Left" Margin="12,35,0,0" Name="lblShopVenue" VerticalAlignment="Top" Width="69" Grid.Row="1" Content="Venue : "/>
+                    <TextBox Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="87,31,0,0" Name="tbxShopVenue" VerticalAlignment="Top" Width="120"  />
+                    <sdk:Label Height="28" HorizontalAlignment="Left" Margin="12,60,0,0" Name="lblShopLong" VerticalAlignment="Top" Width="69" Grid.Row="1" Content="Longtitude : "/>
+                    <sdk:Label Height="28" HorizontalAlignment="Left" Margin="12,89,0,0" Name="lblShopLat" VerticalAlignment="Top" Width="69" Grid.Row="1" Content="Latitude : "/>
+                    <sdk:Label Height="28" HorizontalAlignment="Left" Margin="12,118,0,0" Name="lblShopDesc" VerticalAlignment="Top" Width="93" Grid.Row="1" Content="Description : "/>
+                    <sdk:Label Height="19" HorizontalAlignment="Right" Margin="0,0,11,243" Name="lblShopImage" VerticalAlignment="Bottom" Width="55" Content="Image : " Grid.Row="1" />
+                    <TextBox Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="87,60,0,0" Name="tbxShoplong" VerticalAlignment="Top" Width="120"  />
+                    <TextBox Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="87,89,0,0" Name="tbxShoplat" VerticalAlignment="Top" Width="120" />
+                    <Image Grid.ColumnSpan="2" Grid.Row="1" Height="150" HorizontalAlignment="Left" Margin="298,60,0,0" Name="UpdateImg" Stretch="Fill" VerticalAlignment="Top" Width="175" />
+                    <TextBox Grid.Row="1" Height="114" HorizontalAlignment="Left" Margin="12,140,0,0" Name="tbxShopDesc" VerticalAlignment="Top" Width="203" />
+                    <sdk:Label Grid.Row="1" Height="17" HorizontalAlignment="Left" Margin="87,9,0,0" Name="lblShoppName" VerticalAlignment="Top" Width="120" Content="lblName"/>
+                    <Button Content="Upload Image" Grid.ColumnSpan="2" Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="298,31,0,0" Name="btnUpdateImage" VerticalAlignment="Top" Width="92" Click="btnUpdateImage_Click" />
+                    <sdk:Label Grid.RowSpan="2" Height="28" HorizontalAlignment="Left" Margin="46,28,0,0" Name="lblHidden" VerticalAlignment="Top" Width="120" Visibility="Collapsed" />
+                </Grid>
+            </sdk:TabItem>
+            <sdk:TabItem Header="Delete" Name="tabDelete">
+                <Grid>
+                    <Button Content="Delete" Height="23" HorizontalAlignment="Left" Margin="345,245,0,0" Name="btnDelete" VerticalAlignment="Top" Width="75" Click="btnDelete_Click" />
+                    <sdk:Label Grid.Row="1" Height="28" HorizontalAlignment="Left" Margin="36,9,0,0" Name="lblShoppingName" VerticalAlignment="Top" Width="69" Content="Name : "/>
+                    <sdk:Label Height="28" HorizontalAlignment="Left" Margin="36,35,0,0" Name="lblShoppingVenue" VerticalAlignment="Top" Width="69" Grid.Row="1" Content="Venue : "/>
+                    <sdk:Label Height="28" HorizontalAlignment="Left" Margin="12,60,0,0" Name="lblShoppingLong" VerticalAlignment="Top" Width="69" Content="Longtitude : "/>
+                    <sdk:Label Height="28" HorizontalAlignment="Left" Margin="24,86,0,0" Name="lblShoppingLat" VerticalAlignment="Top" Width="69" Content="Latitude : "/>
+                    <sdk:Label Height="28" Margin="6,109,205,0" Name="lblShoppingDesc" VerticalAlignment="Top" Content="Description : "/>
+                    <sdk:Label Height="19" HorizontalAlignment="Right" Margin="0,0,209,325" Name="lblShoppingImage" VerticalAlignment="Bottom" Width="55" Content="Image : " />
+                    <Image Height="150" HorizontalAlignment="Left" Margin="223,35,0,0" Name="DeleteImg" Stretch="Fill" VerticalAlignment="Top" Width="175" />
+                    <sdk:Label Grid.Row="1" Height="19" HorizontalAlignment="Left" Margin="87,9,0,0" Name="lblSpName" VerticalAlignment="Top" Width="120" Content="lblName" />
+                    <sdk:Label Grid.Row="1" Height="28" HorizontalAlignment="Left" Margin="87,35,0,0" Name="lblSpVenue" VerticalAlignment="Top" Width="120" Content="lblEventName"/>
+                    <sdk:Label Height="28" HorizontalAlignment="Left" Margin="87,60,0,0" Name="lblSpLong" VerticalAlignment="Top" Width="120" Content="lblEventLong"/>
+                    <sdk:Label Height="28" HorizontalAlignment="Left" Margin="87,86,0,0" Name="lblSpLat" VerticalAlignment="Top" Width="120" Content="lblEventLat" />
+                    <sdk:Label Height="19" HorizontalAlignment="Left" Margin="87,109,0,0" Name="lblSpDesc" VerticalAlignment="Top" Width="120" Content="lblDesc"/>
+                    <sdk:Label Height="28" HorizontalAlignment="Left" Margin="34,179,0,0" Name="lblHidden2" VerticalAlignment="Top" Width="120" Visibility="Collapsed" />
+                </Grid>
+            </sdk:TabItem>
+        </sdk:TabControl>
+        <sdk:Label Height="40" HorizontalAlignment="Left" Margin="209,12,0,0" Name="label1" VerticalAlignment="Top" Width="131" Content="Shopping" FontSize="28" />
+        <Button Content="Back To Main" Height="23" HorizontalAlignment="Left" Margin="403,448,0,0" Name="btnBack" VerticalAlignment="Top" Width="104" Click="btnBack_Click" />
+    </Grid>
+</navigation:Page>
+

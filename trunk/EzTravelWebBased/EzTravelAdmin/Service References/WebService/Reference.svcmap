@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="993d12eb-7eac-4df9-824f-99f46ba79780" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://46.4.195.237/EZTravelWebWCF/Service1.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Service11.wsdl" MetadataType="Wsdl" ID="c3f44c84-cc53-4bcd-b447-6a31fe133d34" SourceId="1" SourceUrl="http://static.237.195.4.46.clients.your-server.de/EZTravelWebWCF/Service1.svc?wsdl" />
+    <MetadataFile FileName="Service14.xsd" MetadataType="Schema" ID="956231eb-6e0e-418b-801b-7051427013d3" SourceId="1" SourceUrl="http://static.237.195.4.46.clients.your-server.de/EZTravelWebWCF/Service1.svc?xsd=xsd3" />
+    <MetadataFile FileName="Service141.xsd" MetadataType="Schema" ID="83f8c7ad-c657-4b16-8bd8-126579031aa5" SourceId="1" SourceUrl="http://static.237.195.4.46.clients.your-server.de/EZTravelWebWCF/Service1.svc?xsd=xsd2" />
+    <MetadataFile FileName="Service142.xsd" MetadataType="Schema" ID="99af19f8-18a2-4007-83f9-0bf82c9475a3" SourceId="1" SourceUrl="http://static.237.195.4.46.clients.your-server.de/EZTravelWebWCF/Service1.svc?xsd=xsd1" />
+    <MetadataFile FileName="Service143.xsd" MetadataType="Schema" ID="d32b69b3-129a-4dfc-84ce-19ed974f82fe" SourceId="1" SourceUrl="http://static.237.195.4.46.clients.your-server.de/EZTravelWebWCF/Service1.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service1.disco" MetadataType="Disco" ID="fa836c8c-e59d-4b51-8f76-5df516de7c00" SourceId="1" SourceUrl="http://46.4.195.237/EZTravelWebWCF/Service1.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

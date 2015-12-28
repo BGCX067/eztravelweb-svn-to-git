@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EzTravelWebBased.Web", "SilverlightApplication2.Web\EzTravelWebBased.Web.csproj", "{4DC96DF1-9D2D-4F0B-B2D3-FDF068CDDBF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EzTravelAdmin", "EzTravelAdmin\EzTravelAdmin.csproj", "{75040F84-FDA2-4326-B754-DDD8CF93FAAB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BD735C03-221D-4812-8DDE-6D283B7FDC63} = {BD735C03-221D-4812-8DDE-6D283B7FDC63}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfService1", "WcfService1\WcfService1.csproj", "{BD735C03-221D-4812-8DDE-6D283B7FDC63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EzTravelWeb", "EzTravelWeb\EzTravelWeb.csproj", "{A16502C7-A327-42FE-BF32-D41D4E735E94}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4DC96DF1-9D2D-4F0B-B2D3-FDF068CDDBF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DC96DF1-9D2D-4F0B-B2D3-FDF068CDDBF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DC96DF1-9D2D-4F0B-B2D3-FDF068CDDBF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DC96DF1-9D2D-4F0B-B2D3-FDF068CDDBF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75040F84-FDA2-4326-B754-DDD8CF93FAAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75040F84-FDA2-4326-B754-DDD8CF93FAAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75040F84-FDA2-4326-B754-DDD8CF93FAAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75040F84-FDA2-4326-B754-DDD8CF93FAAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD735C03-221D-4812-8DDE-6D283B7FDC63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD735C03-221D-4812-8DDE-6D283B7FDC63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD735C03-221D-4812-8DDE-6D283B7FDC63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD735C03-221D-4812-8DDE-6D283B7FDC63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A16502C7-A327-42FE-BF32-D41D4E735E94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A16502C7-A327-42FE-BF32-D41D4E735E94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A16502C7-A327-42FE-BF32-D41D4E735E94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A16502C7-A327-42FE-BF32-D41D4E735E94}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

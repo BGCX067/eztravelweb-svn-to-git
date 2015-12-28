@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WcfService1" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfService1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="POI">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Poi_Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Poi_Adult_Price" type="xs:double" />
+      <xs:element minOccurs="0" name="Poi_Child_Price" type="xs:double" />
+      <xs:element minOccurs="0" name="Poi_Descript" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Poi_Elderly_Price" type="xs:double" />
+      <xs:element minOccurs="0" name="Poi_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Poi_Img" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="Poi_Latitude" type="xs:double" />
+      <xs:element minOccurs="0" name="Poi_Longitude" type="xs:double" />
+      <xs:element minOccurs="0" name="Poi_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Poi_Price" type="xs:double" />
+      <xs:element minOccurs="0" name="Poi_Student_Price" type="xs:double" />
+      <xs:element minOccurs="0" name="Price_Cat" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="POI" nillable="true" type="tns:POI" />
+  <xs:complexType name="ArrayOfdisplayItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="displayItem" nillable="true" type="tns:displayItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfdisplayItem" nillable="true" type="tns:ArrayOfdisplayItem" />
+  <xs:complexType name="displayItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Image" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="displayItem" nillable="true" type="tns:displayItem" />
+  <xs:complexType name="ArrayOfMarkerDB">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MarkerDB" nillable="true" type="tns:MarkerDB" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMarkerDB" nillable="true" type="tns:ArrayOfMarkerDB" />
+  <xs:complexType name="MarkerDB">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Direction" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JID" type="xs:int" />
+      <xs:element minOccurs="0" name="MarkerID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MarkerDB" nillable="true" type="tns:MarkerDB" />
+  <xs:complexType name="Event">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EID" type="xs:int" />
+      <xs:element minOccurs="0" name="EImage" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="ELat" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ELong" type="xs:decimal" />
+      <xs:element minOccurs="0" name="EName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="EVenue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EndDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EndTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="HighPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="LowPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StartTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Event" nillable="true" type="tns:Event" />
+  <xs:complexType name="Dining">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DImage" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="DLat" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DLong" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DVenue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DiningID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Dining" nillable="true" type="tns:Dining" />
+  <xs:complexType name="Shopping">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SID" type="xs:int" />
+      <xs:element minOccurs="0" name="SImage" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="SLat" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SLong" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SVenue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Shopping" nillable="true" type="tns:Shopping" />
+  <xs:complexType name="Accommodation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HID" type="xs:int" />
+      <xs:element minOccurs="0" name="H_Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="H_Facilities" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="H_Img" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="H_Latitude" type="xs:double" />
+      <xs:element minOccurs="0" name="H_Longitude" type="xs:double" />
+      <xs:element minOccurs="0" name="H_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="H_descript" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="High_price" type="xs:double" />
+      <xs:element minOccurs="0" name="Low_price" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Accommodation" nillable="true" type="tns:Accommodation" />
+</xs:schema>

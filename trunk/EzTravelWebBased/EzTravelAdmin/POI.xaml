@@ -1,0 +1,108 @@
+﻿<navigation:Page x:Class="EzTravelAdmin.POI" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="557" d:DesignHeight="616"
+           Title="POI Page" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    <Grid x:Name="LayoutRoot" Background="LightBlue" Width="549" Height="614" ShowGridLines="False">
+    <TextBlock FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Margin="175,24,146,560" Text="Places Of Interest" VerticalAlignment="Center" Width="229" />
+        <sdk:TabControl Height="513" HorizontalAlignment="Left" Margin="11,60,0,0" Name="tabPOIControl" VerticalAlignment="Top" Width="526">
+            <sdk:TabItem Header="Insert" Name="tabPOIInsert" LostFocus="tabPOIInsert_LostFocus">
+                <Grid Height="405" Width="518">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*" />
+                        <ColumnDefinition Width="469*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Button Content="Create" Height="23" Name="btnCreate" Width="75" Grid.Column="1" Margin="399,375,39,7" Click="btnCreate_Click" />
+                    <sdk:Label Grid.Column="1" Height="19" HorizontalAlignment="Left" Margin="27,10,0,0" Name="lblPOIName" VerticalAlignment="Top" Width="120" Content="Name:" />
+                    <TextBox Grid.Column="1" Height="22" HorizontalAlignment="Left" Margin="105,6,0,0" Name="tbxPOIName" VerticalAlignment="Top" Width="168" />
+                    <sdk:Label Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="27,38,0,0" Name="lblPOIAddress" VerticalAlignment="Top" Width="84" Content="Address:" />
+                    <TextBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="105,34,0,0" Name="tbxPOIAddress" VerticalAlignment="Top" Width="168" />
+                    <TextBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="105,253,0,0" Name="tbxPOILatitude" VerticalAlignment="Top" Width="120" />
+                    <sdk:Label Grid.Column="1" Height="28" HorizontalAlignment="Left" Margin="245,257,0,0" Name="lblPOILongitude" VerticalAlignment="Top" Width="120" Content="Longitude:"/>
+                    <TextBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="334,253,0,0" Name="tbxPOILongitude" VerticalAlignment="Top" Width="120" />
+                    <sdk:Label Grid.Column="1" Height="28" HorizontalAlignment="Left" Margin="8,303,0,0" Name="lblPOIDescript" VerticalAlignment="Top" Width="120" Content="Description:" />
+                    <TextBox Grid.Column="1" Height="68" HorizontalAlignment="Left" Margin="105,303,0,0" Name="tbxPOIDescription" VerticalAlignment="Top" Width="399" />
+                    <sdk:Label Grid.Column="1" Height="28" HorizontalAlignment="Left" Margin="8,257,0,0" Name="lblPOILatitude" VerticalAlignment="Top" Width="120" Content="Latitude:" />
+                    <Image Grid.Column="1" Height="102" HorizontalAlignment="Left" Margin="307,0,0,293" Name="uploadPOIImg" Stretch="Fill" VerticalAlignment="Bottom" Width="167" />
+
+                    <RadioButton Content="Standard Price" Grid.Column="1" Height="16" HorizontalAlignment="Left" Margin="27,103,0,0" Name="rbStandard" VerticalAlignment="Top" Checked="rbStandard_Checked" />
+                    <RadioButton Content="Price Category" Grid.Column="1" Height="16" HorizontalAlignment="Left" Margin="155,103,0,0" Name="rbPriceCat" VerticalAlignment="Top" Checked="rbPriceCat_Checked" />
+                    <Grid Height="220" HorizontalAlignment="Left" Margin="2,35,0,0" Name="gridPriceCat" VerticalAlignment="Top" Width="306" Grid.ColumnSpan="2" Visibility="Collapsed">
+                        <sdk:Label Content="Student Price:" Grid.Column="1" Height="28" HorizontalAlignment="Left" Margin="15,126,0,0" Name="lblPOIStudentPrice" VerticalAlignment="Top" Width="120" />
+                        <sdk:Label Content="  Elderly Price:" Grid.Column="1" Height="28" HorizontalAlignment="Left" Margin="15,183,0,0" Name="lblPOIElderlyPrice" VerticalAlignment="Top" Width="97" />
+                        <sdk:Label Content="Adult Price:" Grid.Column="1" Height="28" HorizontalAlignment="Left" Margin="30,158,0,0" Name="lblPOIAdultPrice" VerticalAlignment="Top" Width="120" />
+                        <sdk:Label Content="Child Price:" Grid.Column="1" Height="28" HorizontalAlignment="Left" Margin="30,96,0,0" Name="lblPOIChildPrice" VerticalAlignment="Top" Width="120"/>
+                        <TextBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="105,183,0,0" Name="tbxPOIElderlyPrice" VerticalAlignment="Top" Width="168" />
+                        <TextBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="105,154,0,0" Name="tbxPOIAdultPrice" VerticalAlignment="Top" Width="168" />
+                        <TextBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="105,122,0,0" Name="tbxPOIStudentPrice" VerticalAlignment="Top" Width="168" />
+                        <TextBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="105,92,0,0" Name="tbxPOIChildPrice" VerticalAlignment="Top" Width="168" />
+                    </Grid>
+                    <Grid Grid.Column="1" Height="230" HorizontalAlignment="Left" Margin="8,20,0,0" Name="gridStandard" VerticalAlignment="Top" Width="284" Visibility="Collapsed">
+                    <sdk:Label Grid.Column="1" Height="28" HorizontalAlignment="Left" Margin="8,146,0,0" Name="lblPOIStandardPrice" VerticalAlignment="Top" Width="120" Content="Standard Price:" />
+                    <TextBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="105,146,0,0" Name="tbxPOIPrice" VerticalAlignment="Top" Width="168" />
+                </Grid>
+                    <sdk:Label Grid.Column="1" Height="28" HorizontalAlignment="Left" Margin="8,79,0,0" Name="label4" VerticalAlignment="Top" Width="120" Content="Please choose 1:"/>
+                    <Button Content="Upload Image" Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="334,118,0,0" Name="btnUploadPOI" VerticalAlignment="Top" Width="110" Click="btnUploadPOI_Click" />
+                </Grid>
+            </sdk:TabItem>
+            <sdk:TabItem Header="Manage" Name="tabManage">
+                <Grid>
+                    <sdk:Label Height="28" HorizontalAlignment="Left" Margin="11,24,0,0" Name="lblSearchPOI" VerticalAlignment="Top" Width="120" Content="Enter POI Name:" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="120,20,0,0" Name="tbxSearch" VerticalAlignment="Top" Width="197" TextChanged="tbxSearch_TextChanged" GotFocus="tbxSearch_GotFocus" />
+                    <Button Content="Search" Height="23" HorizontalAlignment="Right" Margin="0,20,81,0" Name="btnSearch" VerticalAlignment="Top" Width="75" Click="btnSearch_Click" />
+                    <ListBox Height="113" HorizontalAlignment="Left" Margin="120,42,0,0" Name="lbxSearch" VerticalAlignment="Top" Width="197" Visibility="Collapsed" SelectionChanged="lbxSearch_SelectionChanged" />
+                    <Grid Name="gridUpdate" Visibility="Collapsed" Margin="5,50,8,-12" ShowGridLines="True">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="5*" />
+                            <ColumnDefinition Width="469*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="auto" />
+                        </Grid.RowDefinitions>
+                        <Button Click="btnUpdateInfo_Click" Content="Update" Grid.Column="1" Height="23" Margin="276,393,145,22" Name="btnUpdateInfo" Width="75" IsEnabled="false"/>
+                        <sdk:Label Content="Name:" Grid.Column="1" Height="19" HorizontalAlignment="Left" Margin="60,12,0,0" Name="lblUpdateName" VerticalAlignment="Top" Width="120" />
+                        <sdk:Label Content="Address:" Grid.Column="1" Height="28" HorizontalAlignment="Left" Margin="49,38,0,0" Name="lblUpdateAddress" VerticalAlignment="Top" Width="120" />
+                        <TextBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="108,37,0,0" Name="tbxUpdateAddress" VerticalAlignment="Top" Width="168" />
+                        <TextBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="74,271,0,0" Name="tbxUpdateLatitude" VerticalAlignment="Top" Width="153" />
+                        <sdk:Label Content="Longitude:" Grid.Column="1" Height="28" HorizontalAlignment="Left" Margin="243,275,0,0" Name="lblUpdateLongitude" VerticalAlignment="Top" Width="120" />
+                        <TextBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="315,271,0,0" Name="tbxUpdateLongitude" VerticalAlignment="Top" Width="158" />
+                        <Button Click="btnUpdateUpload_Click" Content="Upload Image" Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="359,162,0,0" Name="btnUpdateUpload" VerticalAlignment="Top" Width="110" />
+                        <sdk:Label Content="Description:" Grid.Column="1" Height="28" HorizontalAlignment="Left" Margin="4,315,0,0" Name="lblUpdateDescript" VerticalAlignment="Top" Width="120" />
+                        <TextBox Grid.Column="1" Height="68" HorizontalAlignment="Left" Margin="74,319,0,0" Name="tbxUpdateDescription" VerticalAlignment="Top" Width="399" />
+                        <sdk:Label Content="Latitude:" Grid.Column="1" Height="28" HorizontalAlignment="Left" Margin="15,275,0,0" Name="lblUpdateLatitude" VerticalAlignment="Top" Width="120" />
+                        <Image Grid.Column="1" Height="108" HorizontalAlignment="Left" Margin="338,44,0,0" Name="ImgUpdated" Stretch="Fill" VerticalAlignment="Top" Width="149" />
+                        <sdk:Label Grid.Column="1" Height="28" HorizontalAlignment="Left" Margin="1,350,0,0" Name="lblHiddenPOIID" VerticalAlignment="Top" Visibility="Collapsed" Width="120" />
+                        <sdk:Label Grid.Column="1" Height="28" HorizontalAlignment="Left" Margin="110,12,0,0" Name="lblUName" VerticalAlignment="Top" Width="168" />
+                        <Button Content="Delete" Grid.Column="1" Height="23" HorizontalAlignment="Left" IsEnabled="false" Margin="382,393,0,0" Name="btnBDelete" VerticalAlignment="Top" Width="75" Click="btnBDelete_Click" />
+                        <Grid Height="230" HorizontalAlignment="Left" Margin="7,16,0,0" Name="gridUpdateStan" VerticalAlignment="Top" Visibility="Collapsed" Width="284" Grid.Column="1">
+                            <sdk:Label Content="Standard Price:" Grid.Column="1" Height="28" HorizontalAlignment="Left" Margin="8,146,0,0" Name="label1" VerticalAlignment="Top" Width="120" />
+                            <TextBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="105,146,0,0" Name="tbxUpdateStandard" VerticalAlignment="Top" Width="168" />
+                        </Grid>
+                        <RadioButton Content="Standard Price" Height="16" HorizontalAlignment="Left" Margin="47,84,0,0" Name="rBStan" VerticalAlignment="Top" Grid.Column="1" Checked="rBStan_Checked" />
+                        <RadioButton Content="Price Category" Height="16" HorizontalAlignment="Left" Margin="173,84,0,0" Name="rBPriceC" VerticalAlignment="Top" Grid.Column="1" Checked="rBPriceC_Checked" />
+                    </Grid>
+                    <Grid Height="220" HorizontalAlignment="Left" Margin="11,90,0,0" Name="gridUpdatePrice2" VerticalAlignment="Top" Visibility="Collapsed" Width="306">
+                        <sdk:Label Content="Student Price:" Grid.Column="1" Height="28" HorizontalAlignment="Left" Margin="15,126,0,0" Name="label2" VerticalAlignment="Top" Width="120" />
+                        <sdk:Label Content="  Elderly Price:" Grid.Column="1" Height="28" HorizontalAlignment="Left" Margin="15,183,0,0" Name="label3" VerticalAlignment="Top" Width="97" />
+                        <sdk:Label Content="Adult Price:" Grid.Column="1" Height="28" HorizontalAlignment="Left" Margin="30,158,0,0" Name="label5" VerticalAlignment="Top" Width="120" />
+                        <sdk:Label Content="Child Price:" Grid.Column="1" Height="28" HorizontalAlignment="Left" Margin="30,96,0,0" Name="label6" VerticalAlignment="Top" Width="120" />
+                        <TextBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="105,183,0,0" Name="tbxUpdateElderlyPrice" VerticalAlignment="Top" Width="168" />
+                        <TextBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="105,154,0,0" Name="tbxUpdateAdultPrice" VerticalAlignment="Top" Width="168" />
+                        <TextBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="105,122,0,0" Name="tbxUpdateStudPrice" VerticalAlignment="Top" Width="168" />
+                        <TextBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="105,92,0,0" Name="tbxUpdateChildPrice" VerticalAlignment="Top" Width="168" />
+                    </Grid>
+                </Grid>
+            </sdk:TabItem>
+        </sdk:TabControl>
+        <Button Content="Back To Main" Height="23" HorizontalAlignment="Left" Margin="388,579,0,0" Name="btnBack" VerticalAlignment="Top" Width="98" Click="btnBack_Click" />
+    </Grid>
+</navigation:Page>

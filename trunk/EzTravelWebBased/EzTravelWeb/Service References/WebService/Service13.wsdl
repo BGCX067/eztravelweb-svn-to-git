@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://46.4.195.237/EZTravelWebWCF/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://46.4.195.237/EZTravelWebWCF/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://46.4.195.237/EZTravelWebWCF/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfService1" />
+      <xsd:import schemaLocation="http://46.4.195.237/EZTravelWebWCF/Service1.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_checkPOI_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkPOI" />
+  </wsdl:message>
+  <wsdl:message name="IService1_checkPOI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkPOIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_checkShop_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkShop" />
+  </wsdl:message>
+  <wsdl:message name="IService1_checkShop_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkShopResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_checkAcc_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkAcc" />
+  </wsdl:message>
+  <wsdl:message name="IService1_checkAcc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkAccResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_checkEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkEvent" />
+  </wsdl:message>
+  <wsdl:message name="IService1_checkEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_checkDining_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkDining" />
+  </wsdl:message>
+  <wsdl:message name="IService1_checkDining_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkDiningResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_retrieveMarker_InputMessage">
+    <wsdl:part name="parameters" element="tns:retrieveMarker" />
+  </wsdl:message>
+  <wsdl:message name="IService1_retrieveMarker_OutputMessage">
+    <wsdl:part name="parameters" element="tns:retrieveMarkerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_retrieveEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:retrieveEvent" />
+  </wsdl:message>
+  <wsdl:message name="IService1_retrieveEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:retrieveEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_retrieveDining_InputMessage">
+    <wsdl:part name="parameters" element="tns:retrieveDining" />
+  </wsdl:message>
+  <wsdl:message name="IService1_retrieveDining_OutputMessage">
+    <wsdl:part name="parameters" element="tns:retrieveDiningResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_retrieveShopping_InputMessage">
+    <wsdl:part name="parameters" element="tns:retrieveShopping" />
+  </wsdl:message>
+  <wsdl:message name="IService1_retrieveShopping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:retrieveShoppingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_retrieveDictionary_InputMessage">
+    <wsdl:part name="parameters" element="tns:retrieveDictionary" />
+  </wsdl:message>
+  <wsdl:message name="IService1_retrieveDictionary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:retrieveDictionaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_retrievePOI_InputMessage">
+    <wsdl:part name="parameters" element="tns:retrievePOI" />
+  </wsdl:message>
+  <wsdl:message name="IService1_retrievePOI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:retrievePOIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_retrieveHotel_InputMessage">
+    <wsdl:part name="parameters" element="tns:retrieveHotel" />
+  </wsdl:message>
+  <wsdl:message name="IService1_retrieveHotel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:retrieveHotelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_retrievePOIName_InputMessage">
+    <wsdl:part name="parameters" element="tns:retrievePOIName" />
+  </wsdl:message>
+  <wsdl:message name="IService1_retrievePOIName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:retrievePOINameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_retrieveEventName_InputMessage">
+    <wsdl:part name="parameters" element="tns:retrieveEventName" />
+  </wsdl:message>
+  <wsdl:message name="IService1_retrieveEventName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:retrieveEventNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_retrieveShopName_InputMessage">
+    <wsdl:part name="parameters" element="tns:retrieveShopName" />
+  </wsdl:message>
+  <wsdl:message name="IService1_retrieveShopName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:retrieveShopNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_retrieveDiningName_InputMessage">
+    <wsdl:part name="parameters" element="tns:retrieveDiningName" />
+  </wsdl:message>
+  <wsdl:message name="IService1_retrieveDiningName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:retrieveDiningNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_checkLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkLogin" />
+  </wsdl:message>
+  <wsdl:message name="IService1_checkLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertMarker_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertMarker" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertMarker_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertMarkerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertEvent" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertDining_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDining" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertDining_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDiningResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertShopping_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertShopping" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertShopping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertShoppingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertAccommodation_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAccommodation" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertAccommodation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAccommodationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertPOI_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPOI" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertPOI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPOIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateMarker_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMarker" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateMarker_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMarkerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEvent" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateDining_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDining" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateDining_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDiningResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateShopping_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateShopping" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateShopping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateShoppingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateAccommodation_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAccommodation" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateAccommodation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAccommodationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdatePOI_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePOI" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdatePOI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePOIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteMarker_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMarker" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteMarker_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMarkerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEvent" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteDining_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDining" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteDining_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDiningResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteShopping_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteShopping" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteShopping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteShoppingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteAccommodation_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAccommodation" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteAccommodation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAccommodationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeletePOI_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePOI" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeletePOI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePOIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_retrieveBriefInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:retrieveBriefInfo" />
+  </wsdl:message>
+  <wsdl:message name="IService1_retrieveBriefInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:retrieveBriefInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_insertItinerary_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertItinerary" />
+  </wsdl:message>
+  <wsdl:message name="IService1_insertItinerary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertItineraryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_checkItinerary_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkItinerary" />
+  </wsdl:message>
+  <wsdl:message name="IService1_checkItinerary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkItineraryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteItinerary_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteItinerary" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteItinerary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteItineraryResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="checkPOI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/checkPOI" message="tns:IService1_checkPOI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/checkPOIResponse" message="tns:IService1_checkPOI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkShop">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/checkShop" message="tns:IService1_checkShop_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/checkShopResponse" message="tns:IService1_checkShop_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkAcc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/checkAcc" message="tns:IService1_checkAcc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/checkAccResponse" message="tns:IService1_checkAcc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/checkEvent" message="tns:IService1_checkEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/checkEventResponse" message="tns:IService1_checkEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkDining">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/checkDining" message="tns:IService1_checkDining_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/checkDiningResponse" message="tns:IService1_checkDining_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveMarker">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/retrieveMarker" message="tns:IService1_retrieveMarker_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/retrieveMarkerResponse" message="tns:IService1_retrieveMarker_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/retrieveEvent" message="tns:IService1_retrieveEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/retrieveEventResponse" message="tns:IService1_retrieveEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveDining">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/retrieveDining" message="tns:IService1_retrieveDining_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/retrieveDiningResponse" message="tns:IService1_retrieveDining_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveShopping">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/retrieveShopping" message="tns:IService1_retrieveShopping_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/retrieveShoppingResponse" message="tns:IService1_retrieveShopping_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveDictionary">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/retrieveDictionary" message="tns:IService1_retrieveDictionary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/retrieveDictionaryResponse" message="tns:IService1_retrieveDictionary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="retrievePOI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/retrievePOI" message="tns:IService1_retrievePOI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/retrievePOIResponse" message="tns:IService1_retrievePOI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveHotel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/retrieveHotel" message="tns:IService1_retrieveHotel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/retrieveHotelResponse" message="tns:IService1_retrieveHotel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="retrievePOIName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/retrievePOIName" message="tns:IService1_retrievePOIName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/retrievePOINameResponse" message="tns:IService1_retrievePOIName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveEventName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/retrieveEventName" message="tns:IService1_retrieveEventName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/retrieveEventNameResponse" message="tns:IService1_retrieveEventName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveShopName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/retrieveShopName" message="tns:IService1_retrieveShopName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/retrieveShopNameResponse" message="tns:IService1_retrieveShopName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveDiningName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/retrieveDiningName" message="tns:IService1_retrieveDiningName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/retrieveDiningNameResponse" message="tns:IService1_retrieveDiningName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/checkLogin" message="tns:IService1_checkLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/checkLoginResponse" message="tns:IService1_checkLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertMarker">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertMarker" message="tns:IService1_InsertMarker_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertMarkerResponse" message="tns:IService1_InsertMarker_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertEvent" message="tns:IService1_InsertEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertEventResponse" message="tns:IService1_InsertEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDining">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertDining" message="tns:IService1_InsertDining_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertDiningResponse" message="tns:IService1_InsertDining_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertShopping">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertShopping" message="tns:IService1_InsertShopping_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertShoppingResponse" message="tns:IService1_InsertShopping_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertAccommodation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertAccommodation" message="tns:IService1_InsertAccommodation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertAccommodationResponse" message="tns:IService1_InsertAccommodation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPOI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertPOI" message="tns:IService1_InsertPOI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertPOIResponse" message="tns:IService1_InsertPOI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMarker">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateMarker" message="tns:IService1_UpdateMarker_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateMarkerResponse" message="tns:IService1_UpdateMarker_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateEvent" message="tns:IService1_UpdateEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateEventResponse" message="tns:IService1_UpdateEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDining">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateDining" message="tns:IService1_UpdateDining_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateDiningResponse" message="tns:IService1_UpdateDining_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateShopping">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateShopping" message="tns:IService1_UpdateShopping_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateShoppingResponse" message="tns:IService1_UpdateShopping_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAccommodation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateAccommodation" message="tns:IService1_UpdateAccommodation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateAccommodationResponse" message="tns:IService1_UpdateAccommodation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePOI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdatePOI" message="tns:IService1_UpdatePOI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdatePOIResponse" message="tns:IService1_UpdatePOI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMarker">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteMarker" message="tns:IService1_DeleteMarker_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteMarkerResponse" message="tns:IService1_DeleteMarker_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteEvent" message="tns:IService1_DeleteEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteEventResponse" message="tns:IService1_DeleteEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDining">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteDining" message="tns:IService1_DeleteDining_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteDiningResponse" message="tns:IService1_DeleteDining_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteShopping">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteShopping" message="tns:IService1_DeleteShopping_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteShoppingResponse" message="tns:IService1_DeleteShopping_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAccommodation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteAccommodation" message="tns:IService1_DeleteAccommodation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteAccommodationResponse" message="tns:IService1_DeleteAccommodation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePOI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeletePOI" message="tns:IService1_DeletePOI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeletePOIResponse" message="tns:IService1_DeletePOI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveBriefInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/retrieveBriefInfo" message="tns:IService1_retrieveBriefInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/retrieveBriefInfoResponse" message="tns:IService1_retrieveBriefInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertItinerary">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/insertItinerary" message="tns:IService1_insertItinerary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/insertItineraryResponse" message="tns:IService1_insertItinerary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkItinerary">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/checkItinerary" message="tns:IService1_checkItinerary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/checkItineraryResponse" message="tns:IService1_checkItinerary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteItinerary">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/deleteItinerary" message="tns:IService1_deleteItinerary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/deleteItineraryResponse" message="tns:IService1_deleteItinerary_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="checkPOI">
+      <soap:operation soapAction="http://tempuri.org/IService1/checkPOI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkShop">
+      <soap:operation soapAction="http://tempuri.org/IService1/checkShop" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkAcc">
+      <soap:operation soapAction="http://tempuri.org/IService1/checkAcc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkEvent">
+      <soap:operation soapAction="http://tempuri.org/IService1/checkEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkDining">
+      <soap:operation soapAction="http://tempuri.org/IService1/checkDining" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveMarker">
+      <soap:operation soapAction="http://tempuri.org/IService1/retrieveMarker" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveEvent">
+      <soap:operation soapAction="http://tempuri.org/IService1/retrieveEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveDining">
+      <soap:operation soapAction="http://tempuri.org/IService1/retrieveDining" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveShopping">
+      <soap:operation soapAction="http://tempuri.org/IService1/retrieveShopping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveDictionary">
+      <soap:operation soapAction="http://tempuri.org/IService1/retrieveDictionary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrievePOI">
+      <soap:operation soapAction="http://tempuri.org/IService1/retrievePOI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveHotel">
+      <soap:operation soapAction="http://tempuri.org/IService1/retrieveHotel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrievePOIName">
+      <soap:operation soapAction="http://tempuri.org/IService1/retrievePOIName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveEventName">
+      <soap:operation soapAction="http://tempuri.org/IService1/retrieveEventName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveShopName">
+      <soap:operation soapAction="http://tempuri.org/IService1/retrieveShopName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveDiningName">
+      <soap:operation soapAction="http://tempuri.org/IService1/retrieveDiningName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkLogin">
+      <soap:operation soapAction="http://tempuri.org/IService1/checkLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertMarker">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertMarker" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertEvent">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDining">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertDining" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertShopping">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertShopping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertAccommodation">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertAccommodation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPOI">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertPOI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMarker">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateMarker" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEvent">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDining">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateDining" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateShopping">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateShopping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAccommodation">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateAccommodation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePOI">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdatePOI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMarker">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteMarker" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEvent">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDining">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteDining" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteShopping">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteShopping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAccommodation">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteAccommodation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePOI">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeletePOI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveBriefInfo">
+      <soap:operation soapAction="http://tempuri.org/IService1/retrieveBriefInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertItinerary">
+      <soap:operation soapAction="http://tempuri.org/IService1/insertItinerary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkItinerary">
+      <soap:operation soapAction="http://tempuri.org/IService1/checkItinerary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteItinerary">
+      <soap:operation soapAction="http://tempuri.org/IService1/deleteItinerary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://46.4.195.237/EZTravelWebWCF/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

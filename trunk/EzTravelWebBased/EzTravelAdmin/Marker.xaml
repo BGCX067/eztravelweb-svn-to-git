@@ -1,0 +1,37 @@
+﻿<navigation:Page x:Class="EzTravelAdmin.Marker" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="400" d:DesignHeight="300"
+           Title="Marker Page" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    <Grid x:Name="LayoutRoot" Background="LightBlue" Width="400" Height="300" ShowGridLines="False">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="315*" />
+            <ColumnDefinition Width="85*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35" />
+            <RowDefinition Height="226*" />
+            <RowDefinition Height="39*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Margin="125,10,190,9" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Button Content="Delete" Grid.Row="2" Height="23" HorizontalAlignment="Left" Margin="234,4,0,0" Name="btnDelete" VerticalAlignment="Top" Width="75" Click="btnDelete_Click" />
+        <Button Content="Update" Grid.Row="2" Height="23" HorizontalAlignment="Left" Margin="153,4,0,0" Name="btnUpdate" VerticalAlignment="Top" Width="75" Click="btnUpdate_Click" />
+        <Button Grid.Row="2" Height="23" HorizontalAlignment="Left" Margin="72,4,0,0" Name="btnInsert" VerticalAlignment="Top" Width="75" Content="Insert New" Click="btnInsert_Click" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="12,12,0,0" Name="tbkID" Text="Journey ID :" VerticalAlignment="Top" />
+        <Button Content="Search" Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="0,6,0,0" Name="btnSearch" VerticalAlignment="Top" Width="75" Click="btnSearch_Click" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="88,6,0,0" Name="tbxJID" VerticalAlignment="Top" Width="221" />
+        <sdk:DataGrid AutoGenerateColumns="False" Grid.Row="1" Height="218" HorizontalAlignment="Left" Margin="7,8,0,0" Name="DGInfoMarker" VerticalAlignment="Top" Width="383" Grid.ColumnSpan="2">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding JID}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Journey ID" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding MarkerID}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Marker ID" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding Direction}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Direction" Width="Auto" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Button Content="Back" Grid.Row="2" Height="23" HorizontalAlignment="Left" Margin="313,4,0,0" Name="btn_Back" VerticalAlignment="Top" Width="75" Click="btn_Back_Click" Grid.ColumnSpan="2" />
+        
+    </Grid>
+</navigation:Page>

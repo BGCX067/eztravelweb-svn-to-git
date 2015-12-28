@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="EzTravelAdmin.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+     xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"    
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+
+    <Grid x:Name="LayoutRoot" Background="LightBlue" Width="400" Height="300" ShowGridLines="False">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250" />
+            <ColumnDefinition Width="150" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="FormLayoutGrid" Grid.Row="1" Grid.Column="0" ShowGridLines="False" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="114*" />
+                <RowDefinition Height="53*" />
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="1" Text="Password :" Margin="87,29,0,18" HorizontalAlignment="Left" Grid.Column="1" d:LayoutOverrides="Height" FontFamily="Monotype Corsiva" FontSize="16" FontWeight="Bold" />
+            <TextBlock Text="Username :" Margin="85,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Column="1" FontFamily="Monotype Corsiva" FontSize="16" FontWeight="Bold" />
+            <Image Margin="91,8,-65,40" Source="logo.png" Stretch="Fill" Grid.Column="1"/>
+        </Grid>
+        <TextBox Name="tbxUser" Grid.Row="1" Grid.Column="1" Margin="-62,0,65,60" Height="24" VerticalAlignment="Bottom" />
+        <PasswordBox Name="pbPass" Grid.Row="1" Grid.Column="1" Margin="-62,160,65,17" Height="24" />
+        <Button Name="btnCancel" Grid.Row="2" Grid.Column="1" Content="Cancel" Margin="-17,20,0,36" FontSize="14" VerticalAlignment="Center" Click="btnCancel_Click" HorizontalAlignment="Left" Width="83" Height="25" FontFamily="Segoe UI" >
+        	<Button.Effect>
+        		<DropShadowEffect/>
+        	</Button.Effect>
+        </Button>
+        <Button Name="btnLogin" Grid.Row="2" Content="Login" Margin="103,20,64,36" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Click="btnLogin_Click" Width="83" Height="25" FontFamily="Segoe UI" >
+        	<Button.Effect>
+        		<DropShadowEffect/>
+        	</Button.Effect>
+          
+
+        </Button>
+        
+    </Grid>
+</UserControl>
